@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable"
+    tools:context=".setting">
+    <TextView
+        android:id="@+id/Judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/redhatdisplay_regular"
+        android:textSize="17pt"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="Settings" />
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="109dp"
+        android:layout_height="66dp"
+        android:clickable="true"
+        android:onClick="back"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/arrow_back"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="13dp"
+        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:id="@+id/Isi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Judul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pp"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:src="@drawable/man" />
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@id/pp"
+                android:text="Zaidan"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/white"
+                android:textSize="13pt" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:textSize="8pt"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textColor="@color/white"
+            android:text="zaidan.diwangkara@mhs.unsoed.ac.id\nPasswordZaidan123" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/pink"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Isi">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:onClick="ganti"
+            android:text="Ganti Foto Profile"
+            android:textColor="@color/white"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
